@@ -1,0 +1,390 @@
+:root {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  color: #122033;
+  background:
+    radial-gradient(circle at top left, rgba(255, 212, 163, 0.55), transparent 30%),
+    linear-gradient(135deg, #f7f4ed 0%, #e7f0ff 100%);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: transparent;
+}
+
+button,
+input,
+select,
+a {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.site-header {
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.header-copy {
+  max-width: 620px;
+}
+
+.header-subcopy {
+  margin: 12px 0 0;
+  color: #526077;
+}
+
+.header-badge-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.header-badge {
+  min-width: 150px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(192, 210, 234, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(18, 32, 51, 0.06);
+}
+
+.header-badge span {
+  display: block;
+  margin-bottom: 6px;
+  color: #61728e;
+  font-size: 0.85rem;
+}
+
+.brand-kicker,
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: #4e6b91;
+}
+
+.site-header h2,
+.hero-section h1,
+.upload-panel h3 {
+  margin: 0;
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.hero-copy,
+.panel-copy {
+  color: #405066;
+}
+
+.hero-copy-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.feature-card {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(202, 214, 233, 0.9);
+  border-radius: 18px;
+  box-shadow: 0 14px 30px rgba(18, 32, 51, 0.05);
+}
+
+.feature-card span {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #122033;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.feature-card h3 {
+  margin: 14px 0 8px;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #53627a;
+}
+
+.upload-panel {
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid #dce5f2;
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 18px 45px rgba(18, 32, 51, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.workflow-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.workflow-step {
+  padding: 12px;
+  border-radius: 14px;
+  background: #f2f6fc;
+  border: 1px solid #d9e3f0;
+}
+
+.workflow-step span {
+  display: inline-flex;
+  width: 26px;
+  height: 26px;
+  margin-bottom: 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #d6e1f0;
+  color: #405066;
+  font-size: 0.8rem;
+}
+
+.workflow-step strong {
+  display: block;
+  font-size: 0.92rem;
+}
+
+.workflow-step-active {
+  background: #eaf2ff;
+  border-color: #adc9ff;
+}
+
+.workflow-step-active span {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.control-group input,
+.control-group select {
+  padding: 12px 14px;
+  border: 1px solid #c8d5e6;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.primary-button {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  background: #1d4ed8;
+  color: #fff;
+  cursor: pointer;
+}
+
+.primary-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.file-meta,
+.status-banner,
+.error-banner {
+  margin: 16px 0 0;
+  font-size: 0.95rem;
+}
+
+.status-banner,
+.error-banner {
+  padding: 12px 14px;
+  border-radius: 12px;
+}
+
+.progress-card {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #f7faff;
+  border: 1px solid #dbe6f5;
+}
+
+.progress-copy {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #41516a;
+}
+
+.progress-copy span:last-child {
+  text-align: right;
+}
+
+.progress-track {
+  height: 10px;
+  background: #dce7f6;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1d4ed8 0%, #0ea5e9 100%);
+  border-radius: inherit;
+  transition: width 240ms ease;
+}
+
+.status-uploading,
+.status-compressing,
+.status-completed {
+  background: #e8f1ff;
+  color: #184a9c;
+}
+
+.status-error,
+.error-banner {
+  background: #ffe8e8;
+  color: #a12828;
+}
+
+.result-card {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #dce5f2;
+}
+
+.results-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.batch-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.summary-card {
+  padding: 14px 16px;
+  background: #f8fbff;
+  border: 1px solid #d9e5f5;
+  border-radius: 16px;
+}
+
+.summary-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: #5b6c83;
+  font-size: 0.9rem;
+}
+
+.summary-card-accent {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #fff;
+}
+
+.summary-card-accent span {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.result-card h4 {
+  margin: 0 0 16px;
+}
+
+.result-summary {
+  margin: 0 0 16px;
+  color: #54657d;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.result-grid div {
+  background: #f7faff;
+  border: 1px solid #dce5f2;
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.result-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #5b6c83;
+  font-size: 0.9rem;
+}
+
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #0f172a;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .site-header,
+  .hero-section {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .header-badge-grid,
+  .hero-feature-grid,
+  .workflow-steps,
+  .batch-summary,
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-copy {
+    flex-direction: column;
+  }
+}
